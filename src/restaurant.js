@@ -94,29 +94,27 @@
 // DICA: para isso, você precisará percorrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const createMenu = (menu) => {
-  let consumption = []
+  let consumption = [];
   return {
-    fetchMenu: () => {
-      return menu
-    },
+    fetchMenu: () => menu,
 
     order: (produto) => {
-      consumption.push(produto)
+      consumption.push(produto);
     },
 
-    consumption: consumption,
+    consumption,
 
     pay: () => {
       let total = 0;
 
-      for (let produto of consumption){
+      for (let produto of consumption) {
        // somar valores no total
       }
 
-      return total + (total * 0.1)
-    }
+      return total + (total * 0.1);
+    },
 
-  }
+  };
 };
 
 module.exports = createMenu;
